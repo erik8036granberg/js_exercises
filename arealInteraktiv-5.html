@@ -13,12 +13,33 @@
 		let length = prompt("Hvad er længden?");
 		let width = prompt("Hvad er bredden?");
 
+
 		//		udregning
 		area = length * width;
 
-		//		Alert mål
-		alert("Længde: " + length + " meter\nBredde: " + width +
-			" meter\nAreal: " + area + " meter");
+
+		if (length == null && width == null) {
+			alert("Kan ikke regne det ud");
+		} else if (length == "" && width == "") {
+			alert("Kan ikke regne det ud");
+		} else if (length == null && width == "") {
+			alert("Kan ikke regne det ud");
+		} else if (length == "" && width == null) {
+			alert("Kan ikke regne det ud");
+		} else if (isNaN(length)) {
+			alert("Kan ikke regne det ud");
+		} else if (isNaN(width)) {
+			alert("Kan ikke regne det ud");
+		} else {
+			//		Alert mål
+			alert("Længde: " + length + " meter\nBredde: " + width +
+				" meter\nAreal: " + area + " meter");
+		}
+
+		let forfra = confirm("Vil du starte forfra?");
+		if (forfra) {
+			location.reload();
+		}
 	</script>
 
 </body>
