@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<title>goddagnavne-4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<script>
+		//		variabel + prompt
+
+		let fornavn = prompt("Hvad er dit fornavn?");
+		let efternavn = prompt("Hvad er dit efternavn?");
+
+		//		Alert if-else
+		if (fornavn == null && efternavn == null) {
+			alert("Goddag min ven");
+		} else if (fornavn == "" && efternavn == "") {
+			alert("Goddag min ven");
+		} else if (fornavn == null && efternavn == "") {
+			alert("Goddag min ven");
+		} else if (fornavn == "" && efternavn == null) {
+			alert("Goddag min ven");
+		} else if (fornavn != null && efternavn == null) {
+			alert("Goddag " + fornavn);
+		} else if (fornavn != "" && efternavn == "") {
+			alert("Goddag " + fornavn);
+		} else if (fornavn == null && efternavn != "") {
+			alert("Goddag " + efternavn);
+		} else if (fornavn == "" && efternavn != null) {
+			alert("Goddag " + efternavn);
+		} else {
+			alert("Goddag " + fornavn + " " + efternavn);
+		}
+
+	</script>
+
+</body>
+
+</html>
