@@ -11,7 +11,14 @@
 	<button id="myBut">Knap</button>
 	<script>
 		const myBut = document.querySelector("#myBut");
-		console.log("myBut");
+		console.log(myBut);
+
+		myBut.addEventListener("click", doSomething);
+
+		function doSomething() {
+			alert("Hej!");
+		}
+
 	</script>
 
 </body>
