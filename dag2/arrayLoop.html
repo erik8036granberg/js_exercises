@@ -17,6 +17,8 @@
 			border: 1px solid silver;
 			margin: 7vw;
 			padding: 1vw;
+			background-color: black;
+			color: white;
 		}
 
 		/*********************/
@@ -25,9 +27,12 @@
 </head>
 
 <body>
-	<div id="display"></div>
+	<div id="display">
+	</div>
 
 	<script>
+		const display = document.querySelector("#display");
+
 		//		test af arrey
 		let tracks = ["Rockband - Super nummer", "Metalband - Ondt nummer", "Bluesband - Cool nummer"]
 		tracks.forEach(track => {
