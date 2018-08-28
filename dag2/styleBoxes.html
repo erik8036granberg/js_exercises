@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js-oevelse-1</title>
+	<style>
+		body {
+			color: burlywood;
+		}
+
+		.box {
+			display: inline-block;
+			width: 10vw;
+			height: 10vw;
+			border: 3px solid black;
+			margin: 7vw;
+			transition: all 1s;
+			background-color: aqua;
+		}
+
+		.mybox1_over {
+			background-color: red;
+			width: 12vw;
+			height: 12vw;
+			border: 1px solid green;
+		}
+
+		.mybox2_over {
+			background-color: blue;
+			width: 20vw;
+			height: 20vw;
+			border: none;
+			transform: rotate(20deg);
+		}
+
+		/*********************/
+
+	</style>
+
+</head>
+
+<body>
+	<div class="box" id="box1"></div>
+	<div class="box" id="box2"></div>
+	<div class="box" id="box3"></div>
+	<div class="box" id="box4"></div>
+
+	<script>
+		//Nemme selector ID's
+		const myBox1 = document.querySelector("#box1");
+		const myBox2 = document.querySelector("#box2");
+		const myBox3 = document.querySelector("#box3");
+		const myBox4 = document.querySelector("#box4");
+
+		//eventlistners
+		myBox1.addEventListener("click", doBox1);
+		myBox2.addEventListener("click", doBox2);
+		myBox3.addEventListener("click", doBox3);
+		myBox4.addEventListener("click", doBox4);
+
+		//skift box1
+		function doBox1() {
+			console.log("doBox1");
+			myBox1.classList.add('mybox1_over');
+		}
+
+		//skift box2
+		function doBox2() {
+			console.log("doBox2");
+			myBox2.classList.add('mybox2_over');
+		}
+
+		//skift box3
+		function doBox3() {
+			console.log("doBox3");
+			myBox3.style.backgroundColor = "orange";
+			myBox3.style.height = "30vw";
+		}
+
+		//skift box4
+		function doBox4() {
+			console.log("doBox4");
+			myBox4.style.backgroundColor = "black";
+			myBox4.style.borderWidth = "30px";
+			myBox4.style.borderColor = "green";
+			myBox4.style.transform = "rotate(360deg)";
+		}
+
+	</script>
+</body>
+
+</html>
