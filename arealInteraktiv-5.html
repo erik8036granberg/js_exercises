@@ -18,7 +18,7 @@
 		area = length * width;
 
 		//		Hvis input er tal
-		if (number(width) && number(height)) {
+		if (Number(length) && Number(width)) {
 			//		output svar
 			alert("Længde: " + length + " meter\nBredde: " + width +
 				" meter\nAreal: " + area + " meter");
@@ -27,11 +27,15 @@
 			alert("Kan ikke regne det ud");
 		}
 		//		Skal der startes forfra?
-		let forfra = confirm("Vil du starte forfra?");
-		if (forfra) {
+		if (confirm("Vil du starte forfra?")) {
+			//start forfra
 			location.reload();
 		}
 
+		//		let forfra = confirm("Vil du starte forfra?");
+		//		if (forfra) {
+		//			location.reload();
+		//		}
 	</script>
 
 </body>
