@@ -17,15 +17,16 @@
 		//		udregning
 		area = length * width;
 
-
+		//		Hvis input er tal
 		if (number(width) && number(height)) {
-			//		Alert mål
+			//		output svar
 			alert("Længde: " + length + " meter\nBredde: " + width +
 				" meter\nAreal: " + area + " meter");
 		} else {
+			//		ellers giv fejlmeddelelse
 			alert("Kan ikke regne det ud");
 		}
-
+		//		Skal der startes forfra?
 		let forfra = confirm("Vil du starte forfra?");
 		if (forfra) {
 			location.reload();
