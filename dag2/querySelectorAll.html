@@ -11,6 +11,7 @@
 			color: darkblue;
 			line-height: 150%;
 		}
+
 	</style>
 
 </head>
@@ -33,19 +34,19 @@
 
 
 	<script>
-		//		1 style typo tilføjet til p
+		//		1 style "typo" tilføjet til p
 		document.querySelectorAll("p").forEach(x => {
 			x.classList.add('typo');
 		});
 
-		//		2 style typo tilføjet ved klik
+		//		2 style "typo" tilføjet ved klik
 		document.querySelectorAll("p").forEach((c) => {
 			c.addEventListener("click", () => {
 				c.classList.add("typo")
 			});
 		});
 
-		//		3 Fjern class knap
+		//		3 Fjern class "typo" knap
 		const fjern = document.querySelector("#fjern");
 		fjern.addEventListener("click", () => {
 			document.querySelectorAll("p").
@@ -53,6 +54,7 @@
 				p.classList.remove("typo")
 			});
 		});
+
 	</script>
 </body>
 
