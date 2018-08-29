@@ -9,31 +9,54 @@
 
 <body>
 	<script>
-		//		variabel + prompt
+		//	Revideret: Besked: Kan udbygges i løbet af programmet alt efter hvad der svarers, og kontrolleres for "fejl"-muligheder.
 
+
+		//		variabel + prompt
 		let fornavn = prompt("Hvad er dit fornavn?");
 		let efternavn = prompt("Hvad er dit efternavn?");
+		let besked;
 
-		//		Alert if-else
-		if (fornavn == null && efternavn == null) {
-			alert("Goddag min ven");
-		} else if (fornavn == "" && efternavn == "") {
-			alert("Goddag min ven");
-		} else if (fornavn == null && efternavn == "") {
-			alert("Goddag min ven");
-		} else if (fornavn == "" && efternavn == null) {
-			alert("Goddag min ven");
-		} else if (fornavn != null && efternavn == null) {
-			alert("Goddag " + fornavn);
-		} else if (fornavn != "" && efternavn == "") {
-			alert("Goddag " + fornavn);
-		} else if (fornavn == null && efternavn != "") {
-			alert("Goddag " + efternavn);
-		} else if (fornavn == "" && efternavn != null) {
-			alert("Goddag " + efternavn);
-		} else {
-			alert("Goddag " + fornavn + " " + efternavn);
+		//sæt besked til "Goddag"
+		besked = "Goddag";
+
+		//er fornavn opgivet, tilføj mellemrum + fornavn til besked
+		if (fornavn != null && fornavn != "") {
+			besked += " " + fornavn;
 		}
+		//er efternavn opgivet, tilføj mellemrum+efternavn til besked
+		if (efternavn != null && efternavn != "") {
+			besked += " " + efternavn;
+		}
+		//er besked "Goddag", så tilfør mellemrum "min ven"
+		if (besked == "Goddag") {
+			besked += " min ven";
+		}
+		//giv besked
+		alert(besked);
+
+
+		//		//		Alert if-else
+		//		if (fornavn == null && efternavn == null) {
+		//			alert("Goddag min ven");
+		//		} else if (fornavn == "" && efternavn == "") {
+		//			alert("Goddag min ven");
+		//		} else if (fornavn == null && efternavn == "") {
+		//			alert("Goddag min ven");
+		//		} else if (fornavn == "" && efternavn == null) {
+		//			alert("Goddag min ven");
+		//		} else if (fornavn != null && efternavn == null) {
+		//			alert("Goddag " + fornavn);
+		//		} else if (fornavn != "" && efternavn == "") {
+		//			alert("Goddag " + fornavn);
+		//		} else if (fornavn == null && efternavn != "") {
+		//			alert("Goddag " + efternavn);
+		//		} else if (fornavn == "" && efternavn != null) {
+		//			alert("Goddag " + efternavn);
+		//		} else {
+		//			alert("Goddag " + fornavn + " " + efternavn);
+		//		}
+
 	</script>
 
 </body>
