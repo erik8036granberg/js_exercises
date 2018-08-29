@@ -2,50 +2,53 @@
 <html lang="da">
 
 <head>
-	<title>Arealfunktioner-6.</title>
+	<title>Arealfunktioner-6</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<script>
-		function arealBeregning() {
+		function arealBeregning(a, b) {
 			console.log("arealBeregning");
 
+			//		udregning
+			area = a * b;
+
+			//		Hvis input er tal
+			if (Number(a) && Number(b)) {
+				//		output svar
+				let svar = ("Længde: " + a + " meter\nBredde: " + a +
+					" meter\nAreal: " + area + " meter");
+				return svar;
+			} else {
+				//		ellers giv fejlmeddelelse
+				let svar = ("Kan ikke regne det ud");
+				return svar;
+			}
+		}
+
+		function brugerKontakt() {
+			console.log("brugerKontakt");
 
 			//		variabel + prompt
 			let length = prompt("Hvad er længden?");
 			let width = prompt("Hvad er bredden?");
 
-
 			//		udregning
-			area = length * width;
+			besked = arealBeregning(length, width);
 
+			alert(besked);
 
-			if (length == null && width == null) {
-				alert("Kan ikke regne det ud");
-			} else if (length == "" && width == "") {
-				alert("Kan ikke regne det ud");
-			} else if (length == null && width == "") {
-				alert("Kan ikke regne det ud");
-			} else if (length == "" && width == null) {
-				alert("Kan ikke regne det ud");
-			} else if (isNaN(length)) {
-				alert("Kan ikke regne det ud");
-			} else if (isNaN(width)) {
-				alert("Kan ikke regne det ud");
-			} else {
-				//		Alert mål
-				alert("Længde: " + length + " meter\nBredde: " + width +
-					" meter\nAreal: " + area + " meter");
-			}
-
-			let forfra = confirm("Vil du starte forfra?");
-			if (forfra) {
-				location.reload();
+			//		Skal der startes forfra?
+			if (confirm("Vil du starte forfra?")) {
+				//start forfra
+				brugerKontakt();
 			}
 		}
 
+		//start brugerKontakt
+		brugerKontakt();
 	</script>
 
 </body>
