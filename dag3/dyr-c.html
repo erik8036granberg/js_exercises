@@ -14,10 +14,12 @@
 		background-color: red;
 		color: white;
 	}
+
 </style>
 
 <body>
 	<div id="dyr">
+		<span class="strong"></span>
 	</div>
 
 	<script>
@@ -28,16 +30,17 @@
 			const myDyr = document.querySelector("#dyr");
 
 			let dyrInfo = {
-				"navn": "elefant",
+				"navn": "Elefant",
 				"type": "pattedyr",
 				"levested": "Indien"
 			};
 
-			let besked = "<span class='strong'>" + dyrInfo.navn + " < /span> " + "
-			Et " + dyrInfo.type + ", som lever i " + dyrInfo.levested;
+			let besked = "<strong>" + dyrInfo.navn + "</strong>:" + " Et " + dyrInfo.type + ", som lever i " + dyrInfo.levested;
+
 
 			dyr.innerHTML = besked;
 		}
+
 	</script>
 </body>
 
