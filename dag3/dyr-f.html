@@ -15,7 +15,7 @@
 <body>
 	<div class="dyr"></div>
 	<template class="dyretemplate">
-            <div class="dyr">
+            <div>
                 <h2></h2>
                 <ul>
                     <li class="type-data"></li>
@@ -43,7 +43,7 @@
 				"navn": "Alligator",
 				"type": "krybdyr",
 				"levested": "Amerika",
-				"billede": "koala.jpg"
+				"billede": "alligator.jpg"
 			}
 
 		]
@@ -53,7 +53,7 @@
 		function start() {
 			dest = document.querySelector(".dyr");
 			temp = document.querySelector(".dyretemplate");
-			dyr.forEach(animal => {
+			dyr.forEach(dyr => {
 				let klon = temp.cloneNode(true).content;
 				klon.querySelector("h2").textContent = dyr.navn;
 				klon.querySelector("ul .type-data").textContent = dyr.type;
