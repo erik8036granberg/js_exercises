@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object</title>
+
+
+</head>
+
+<style>
+	#dyr {
+		background-color: red;
+		color: white;
+	}
+</style>
+
+<body>
+	<div class="liste">
+		<strong class="navn"></strong>:<br>
+		<img src="" alt="billed af et dyr,"><br> et <span class="type"></span>, som lever i <span class="levested"></span>
+	</div>
+	<script>
+		let dyrliste = [
+
+			{
+				"navn": "Elefant",
+				"type": "pattedyr",
+				"levested": "Indien",
+				"billede": "elefant.jpg"
+			},
+			{
+				"navn": "Koala",
+				"type": "pattedyr",
+				"levested": "Autralien",
+				"billede": "koala.jpg"
+			},
+			{
+				"navn": "Alligator",
+				"type": "krybdyr",
+				"levested": "Amerika",
+				"billede": "koala.jpg"
+			}
+
+		]
+
+		document.addEventListener("DOMContentLoaded", start);
+
+		let dest = document.querySelector(".liste");
+
+		function start() {
+
+			dyrliste.forEach(dyr => {
+
+				dest.innerHTML += dyr.navn + "<br>" + dyr.type + "<br>" + dyr.levested + "<br><img src='" + dyr.billede ' alt='
+				Her er et billede af et dyr '>';
+			});
+
+			//			document.querySelector(".dyr .navn").textContent = dyrInfo.navn;
+			//			document.querySelector(".dyr .type").textContent = dyrInfo.type;
+			//			document.querySelector(".dyr .levested").textContent = dyrInfo.levested;
+			//			document.querySelector(".dyr img").src = dyrInfo.billede;
+		}
+	</script>
+</body>
+
+</html>
