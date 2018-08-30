@@ -18,29 +18,25 @@
 </style>
 
 <body>
-	<div id="dyr">
-		<span class="strong"></span>
+	<div class="dyr">
+		<strong class="navn"></strong>: et <span class="type"></span>, som lever i <span class="levested"></span>
 	</div>
-
 	<script>
 		document.addEventListener("DOMContentLoaded", start);
 
+		let dyr = {
+			"navn": "elefant",
+			"type": "pattedyr",
+			"levested": "Indien"
+		};
 
 		function start() {
-			const myDyr = document.querySelector("#dyr");
-
-			let dyrInfo = {
-				"navn": "Elefant",
-				"type": "pattedyr",
-				"levested": "Indien"
-			};
-
-			let besked = "<strong>" + dyrInfo.navn + "</strong>:" + " Et " + dyrInfo.type + ", som lever i " + dyrInfo.levested;
-
-
-			dyr.innerHTML = besked;
+			document.querySelector(".dyr .navn").textContent = dyr.navn;
+			document.querySelector(".dyr .type").textContent = dyr.type;
+			document.querySelector(".dyr .levested").textContent = dyr.levested;
 		}
 
+	</script>
 	</script>
 </body>
 
