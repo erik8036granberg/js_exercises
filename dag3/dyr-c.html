@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object</title>
+
+
+</head>
+
+<style>
+	#dyr {
+		background-color: red;
+		color: white;
+	}
+</style>
+
+<body>
+	<div id="dyr">
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", start);
+
+
+		function start() {
+			const myDyr = document.querySelector("#dyr");
+
+			let dyrInfo = {
+				"navn": "elefant",
+				"type": "pattedyr",
+				"levested": "Indien"
+			};
+
+			let besked = "<span class='strong'>" + dyrInfo.navn + " < /span> " + "
+			Et " + dyrInfo.type + ", som lever i " + dyrInfo.levested;
+
+			dyr.innerHTML = besked;
+		}
+	</script>
+</body>
+
+</html>
